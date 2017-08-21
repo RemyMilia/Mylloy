@@ -5,21 +5,12 @@
        <i class="mdi mdi-music-note"></i> 
       </a>
       <ul class="right hide-on-med-and-down">
+        <li><a href="#!">About</a></li>
+        <li><a href="#!" [routerLink]="['/contact']">Contact</a></li>
         <li><a href="https://www.facebook.com/mylloy/"><i class="mdi mdi-facebook"></i></a></li>
         <li><a href="#!"><i class="mdi mdi-soundcloud"></i></a></li>
         <li><a href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi mdi-youtube-play"></i></a></li>
-        <li><a class="dropdown-button btn" href="#!" data-activates="dropdown1"><i class="material-icons right">arrow_drop_down</i></a></li>        
-      </ul>
-      <!-- Dropdown Structure -->
-      <ul id="dropdown1" class="dropdown-content grey darken-3" 
-      data-beloworigin="true" 
-      materialize="dropdown" 
-      [materializeParams]="[options]"> 
-          <li><a href="#!">Upcoming shows</a></li>
-          <li class="divider"></li>
-          <li><a href="#!">About</a></li>
-          <li><a href="#!" [routerLink]="['/contact']">Contact</a></li>
-        </ul>
+      </ul>    
     </div>
   </nav>
 </header>
