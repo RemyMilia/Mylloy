@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  private options = this.getOptions();
+  
+    private getOptions():any {
+      return {
+        hover: true, 
+        inDuration: 2000
+      }
+    }
 }
