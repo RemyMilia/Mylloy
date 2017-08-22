@@ -6,8 +6,7 @@ import { HomepageComponent } from './feature/homepage/homepage.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'homepage'},
-  { path: 'homepage', component: HomepageComponent},
+  { path: '', component: HomepageComponent},
   { path: 'contact', component: ContactComponent}  
 ];
 
