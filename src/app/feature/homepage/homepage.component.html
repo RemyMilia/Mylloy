@@ -1,24 +1,44 @@
 <div class="parallax-container" style="height: 800px">
-    <div materialize="parallax" class="parallax">
-      <img width=1200 src="https://firebasestorage.googleapis.com/v0/b/mylloy-ac68d.appspot.com/o/banniere1-min.jpg?alt=media&token=ce2e2803-2a61-4f4e-abd2-70b18e59dd26">
-    </div>
-    <nav class="grey" style="opacity: 0.6">
-      <div>
-        <a href="#!" class="brand-logo" style="font-family:LemonMilk; font-size:22px; margin-left: 5px;">My lloy</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="https://www.facebook.com/mylloy/">
+  <div materialize="parallax" class="parallax">
+    <img width=1200 src="https://firebasestorage.googleapis.com/v0/b/mylloy-ac68d.appspot.com/o/banniere1-min.jpg?alt=media&token=ce2e2803-2a61-4f4e-abd2-70b18e59dd26">
+  </div>
+  <nav class="grey" style="opacity: 0.6">
+    <div>
+      <a href="#!" class="brand-logo" style="font-family:LemonMilk; font-size:22px; margin-left: 5px;">My lloy</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="https://www.facebook.com/mylloy/">
                         <i class="mdi-18px mdi mdi-facebook"></i></a></li>
-          <li><a href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi-18px mdi mdi-youtube-play"></i></a></li>
-          <li><a href="#!"><i class="mdi-18px mdi mdi-soundcloud"></i></a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="row" style="margin-top: 25px">
-        <h3 style="font-family: LemonMilk;
+        <li><a href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi-18px mdi mdi-youtube-play"></i></a></li>
+        <li><a href="#!"><i class="mdi-18px mdi mdi-soundcloud"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="row" style="margin-top: 25px">
+    <h3 *ngIf="ttt" style="font-family: LemonMilk;
         display: flex;
         justify-content: center;
         background-color: lightgrey;
         margin-top: 22%;
         opacity: 0.59;">Coming soon</h3>
+  </div>
+  <div *ngIf="!ttt" class="row">
+    <div class="col s5 m5 l5"> </div>
+    <div class="col s2 m2 l2" style="display: flex;
+    justify-content: center; height: 600px; align-items: center;">
+      <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-black-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+</div>
