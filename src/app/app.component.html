@@ -1,4 +1,16 @@
 <header>
+  <nav *ngIf="!isHomepage" class="grey" style="opacity: 0.6">
+    <div>
+      <a href="#!" class="brand-logo" style="font-family:LemonMilk; font-size:22px; margin-left: 5px;">My lloy</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="https://www.facebook.com/mylloy/">
+                            <i class="mdi-18px mdi mdi-facebook"></i></a></li>
+        <li><a href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi-18px mdi mdi-youtube-play"></i></a></li>
+        <li><a href="#!"><i class="mdi-18px mdi mdi-soundcloud"></i></a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
 <main>
   <router-outlet></router-outlet>
@@ -6,7 +18,7 @@
 <footer class="page-footer black">
   <div class="footer-copyright">
     <div class="container">
-        <span style="font-size:14px"> @Copyright 2017 MY LLOY | All Rights Reserved </span>
+      <span style="font-size:14px"> @Copyright 2017 MY LLOY | All Rights Reserved </span>
     </div>
   </div>
 </footer>
