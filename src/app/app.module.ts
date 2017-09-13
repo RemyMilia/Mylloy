@@ -28,6 +28,6 @@ import { HomepageComponent } from './feature/homepage/homepage.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 
 }

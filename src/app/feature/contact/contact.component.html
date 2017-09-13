@@ -1,8 +1,11 @@
-<div class="container">
-  <h4> Contact us </h4>
-  <div class="row">
+<div class="crop">
+  <img width=100% src="https://firebasestorage.googleapis.com/v0/b/mylloy-ac68d.appspot.com/o/banniere1-min.jpg?alt=media&token=ce2e2803-2a61-4f4e-abd2-70b18e59dd26">
+</div>
+<div class="row grey lighten-3" style="margin-bottom: 0px !important; background-color: #eeeeee !important;">
+  <div class="container">
     <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="col l12 m12 s12">
       <div class="row">
+        <h5 style="font-family:LemonMilk;"> Contact us </h5>
         <div class="input-field col s6">
           <input type="text" name="Name" ngModel class="validate" required>
           <label>Your Name</label>
@@ -26,8 +29,8 @@
           <label>Your Message</label>
         </div>
       </div>
-      <button class="btn waves-effect waves-light" name="action">Send
-          <i class="material-icons right">send</i>
+
+      <button style="font-family:LemonMilk;margin-bottom:5px;" class="btn waves-effect waves-light  grey darken-3" name="action">Send
       </button>
     </form>
   </div>

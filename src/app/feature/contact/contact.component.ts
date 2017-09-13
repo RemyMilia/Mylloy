@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
     if (f.invalid) {
       toast('Please fill the form properly', 2000);
     } else {
-      this.http.post('//formspree.io/milia.remy@gmail.com', f.value).subscribe(data => {
+      this.http.post('//formspree.io/mylloyband@gmail.com', f.value).subscribe(data => {
         f.resetForm();
         window.location.reload();
       }, (err: HttpErrorResponse) => {

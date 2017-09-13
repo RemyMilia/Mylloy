@@ -1,6 +1,8 @@
-#toast-container {
-  top: auto !important;
-  right: auto !important;
-  bottom: 10%;
-  left:7%;
+.crop {
+  height: 140px;
+  overflow: hidden;
+}
+
+.crop img {
+  margin: -35% 0 0 0px;
 }

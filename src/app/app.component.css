@@ -1,0 +1,18 @@
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left: 7%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  background-color:#424242;
+  z-index:0;
+}
