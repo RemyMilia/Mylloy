@@ -3,34 +3,46 @@
 </div>
 <div class="row grey lighten-3" style="margin-bottom: 0px !important; background-color: #eeeeee !important;">
   <div class="container">
-    <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="col l12 m12 s12">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form);" class="col l12 m12 s12">
       <div class="row">
         <h5 style="font-family:LemonMilk;"> Contact us </h5>
         <div class="input-field col s6">
-          <input type="text" name="Name" ngModel class="validate" required>
+          <input type="text" name="Name" [ngModel]="user.name" #name="ngModel" minlength="3" required>
+          <small [hidden]="name.valid || (name.pristine && !form.submitted)">
+              Name is required (minimum 3 characters).
+          </small>
           <label>Your Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input data-error="Invalid email address" type="email" name="Email" ngModel class="validate" required>
+          <input type="text" name="Email" [ngModel]="user.email" #email="ngModel" minlength="3" required email>
+          <small [hidden]="email.valid || (email.pristine && !form.submitted)">
+              Email is incorrect.
+          </small>
           <label>Your Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input type="text" name="Subject" ngModel class="validate" required>
+          <input type="text" name="Subject" [ngModel]="user.subject" #subject="ngModel" minlength="3" required>
+          <small [hidden]="subject.valid || (subject.pristine && !form.submitted)">
+              Subject is required (minimum 3 characters).
+          </small>
           <label>Subject</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <textarea name="Message" ngModel class="validate materialize-textarea" required></textarea>
+          <textarea name="Message" [ngModel]="message.subject" #message="ngModel" minlength="3" class=" materialize-textarea" required></textarea>
+          <small [hidden]="message.valid || (message.pristine && !form.submitted)">
+              Message is required (minimum 3 characters).
+          </small>
           <label>Your Message</label>
         </div>
       </div>
 
-      <button style="font-family:LemonMilk;margin-bottom:5px;" class="btn waves-effect waves-light  grey darken-3" name="action">Send
+      <button type="submit" style="font-family:LemonMilk;margin-bottom:5px;" class="btn waves-effect waves-light grey darken-3" name="action">Send
       </button>
     </form>
   </div>

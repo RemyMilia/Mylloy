@@ -10,25 +10,24 @@ import { toast } from 'angular2-materialize';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  public user: any;
+  public name: string;
+  constructor(private http: HttpClient) {
+    this.user = {};
+  }
 
-  constructor(private http: HttpClient) { }
-
-  onSubmit(f: NgForm) {
-    if (f.invalid) {
-      toast('Please fill the form properly', 2000);
+  onSubmit(contactForm: NgForm) {
+    if (contactForm.invalid) {
+      toast('Please fill out the form properly', 2000);
     } else {
-      this.http.post('//formspree.io/mylloyband@gmail.com', f.value).subscribe(data => {
-        f.resetForm();
-        window.location.reload();
+      this.http.post('//formspree.io/mylloyband@gmail.com', contactForm.value).subscribe(data => {
+        contactForm.resetForm();
+        toast('Message sent!', 2000);
       }, (err: HttpErrorResponse) => {
-        if (err.error.error === '_replyto or email field has not been sent correctly') {
-          toast('Please enter a correct email address', 2000);
-        }
-        console.log('error while sending message', err.statusText);
+        console.error('error while sending message', err.statusText);
       });
     }
   }
 
-  ngOnInit() { }
-
+  ngOnInit() {}
 }
