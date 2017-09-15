@@ -1,9 +1,17 @@
 <body>
   <header>
+    <ul id="mobile-sidenav" class="side-nav">
+      <li><a style="font-family:LemonMilk;" href="/contact">Contact</a></li>
+      <li><a href="https://www.facebook.com/mylloy/">
+                                <i class="mdi-18px mdi mdi-facebook"></i></a></li>
+      <li><a href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi-18px mdi mdi-youtube-play"></i></a></li>
+      <li><a href="#!"><i class="mdi-18px mdi mdi-soundcloud"></i></a></li>
+    </ul>
     <nav *ngIf="!isHomepage" class="grey darken-3">
       <div>
+        <a materialize="sideNav" href="#" data-activates="mobile-sidenav" class="button-collapse"><i class="material-icons">menu</i></a>
         <a href="#!" class="brand-logo" style="font-family:LemonMilk; font-size:22px; margin-left: 5px;">My lloy</a>
-        <ul class="right hide-on-med-and-down">
+        <ul id="slide-out" class="side-nav" class="right hide-on-med-and-down">
           <li><a style="font-family:LemonMilk;" href="/contact">Contact</a></li>
           <li><a href="https://www.facebook.com/mylloy/">
                             <i class="mdi-18px mdi mdi-facebook"></i></a></li>
@@ -38,4 +46,3 @@
     </div>
   </footer>
 </body>
-
