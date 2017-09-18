@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face {  
-  font-family: LemonMilk; 
+@font-face {
+  font-family: LemonMilk;
   src: url('./assets/fonts/lemonMilk.otf')
+}
+
+.main-font {
+  font-family: LemonMilk;
+}
+
+ul li a {
+  font-family: LemonMilk;
 }

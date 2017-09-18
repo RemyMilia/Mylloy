@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app.routing.module';
 import { MaterializeModule } from 'angular2-materialize';
 import { ContactComponent } from './feature/contact/contact.component';
 import { HomepageComponent } from './feature/homepage/homepage.component';
+import { NavbarComponent } from './feature/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    HomepageComponent
+    HomepageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

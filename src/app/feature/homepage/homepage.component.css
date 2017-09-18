@@ -1,0 +1,15 @@
+.coming-soon-ban {
+  font-family: LemonMilk;
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey;
+  margin-top: 22%;
+  opacity: 0.6;
+}
+
+.container-progress {
+  display: flex;
+  justify-content: center;
+  margin-top: 21%;
+  align-items: center;
+}

@@ -5,7 +5,6 @@ import { toast } from 'angular2-materialize';
 
 
 @Component({
-  selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })

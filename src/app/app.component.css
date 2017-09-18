@@ -16,3 +16,8 @@ main {
   background-color:#424242;
   z-index:0;
 }
+
+.band-title {
+  font-family:LemonMilk;
+  font-size:22px;
+}
