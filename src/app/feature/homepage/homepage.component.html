@@ -7,11 +7,6 @@
     <h3 *ngIf="ready" class="coming-soon-ban">Coming soon</h3>
   </div>
   <div *ngIf="!ready" class="row">
-    <div class="col s5 m5 l5"> </div>
-    <div class="col s2 m2 l2 container-progress">
-      <div class="progress">
-        <div class="indeterminate"></div>
-      </div>
+      <app-loader></app-loader>
     </div>
-  </div>
 </div>

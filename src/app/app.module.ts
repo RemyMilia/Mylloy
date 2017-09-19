@@ -10,6 +10,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { ContactComponent } from './feature/contact/contact.component';
 import { HomepageComponent } from './feature/homepage/homepage.component';
 import { NavbarComponent } from './feature/navbar/navbar.component';
+import { LoaderComponent } from './feature/loader/loader.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NavbarComponent } from './feature/navbar/navbar.component';
     AppComponent,
     ContactComponent,
     HomepageComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

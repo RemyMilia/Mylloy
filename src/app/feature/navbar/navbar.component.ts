@@ -25,7 +25,6 @@ import { Component, Input, OnInit } from '@angular/core';
   `]
 })
 export class NavbarComponent implements OnInit {
-
   @Input()
   isHomepage: Boolean;
 
@@ -34,5 +33,4 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.isHomepage ? this.opacity = 0.6 : this.opacity = 1;
   }
-
 }

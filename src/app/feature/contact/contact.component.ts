@@ -11,6 +11,8 @@ import { toast } from 'angular2-materialize';
 export class ContactComponent implements OnInit {
   public user: any;
   public name: string;
+  public ready: Boolean = false;
+
   constructor(private http: HttpClient) {
     this.user = {};
   }
@@ -28,5 +30,10 @@ export class ContactComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    $(window).on('load', () => {
+      this.ready = true;
+    });
+  }
+
 }
