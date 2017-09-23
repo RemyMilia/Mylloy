@@ -15,6 +15,8 @@ import { LoaderComponent } from './feature/loader/loader.component';
 
 import { MusicService } from './feature/music/service/music.service';
 import { ApiSoundCloudService } from './feature/music/service/soundcloud/api-sound-cloud.service';
+import { MusicDetailsComponent } from './feature/music/music-details/music-details.component';
+import { MusicPlayerComponent } from './feature/music/music-player/music-player.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ApiSoundCloudService } from './feature/music/service/soundcloud/api-sou
     ContactComponent,
     HomepageComponent,
     NavbarComponent,
-    LoaderComponent
+    LoaderComponent,
+    MusicDetailsComponent,
+    MusicPlayerComponent
   ],
   imports: [
     BrowserModule,

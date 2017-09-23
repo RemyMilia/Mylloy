@@ -30,9 +30,17 @@ export class MusicService {
   }
 
   getTracks() {
-    // Request for a track via Soundcloud using a client id
-    return this.apiService.get('https://api.soundcloud.com/tracks/' + environment.soundCloud.tracks, true)
-      .map(res => res.json());
+    return this.apiService.get('https://api.soundcloud.com/playlists/' + environment.soundCloud.tracks, true)
+      .map(res => res.json()).map(play => play.tracks);
+  }
+
+  randomTrack(tracks, currentTrack) {
+    let randomNumber;
+    const trackLength = tracks.length;
+    do {
+      randomNumber = Math.floor((Math.random() * trackLength));
+    } while (randomNumber === tracks.indexOf(currentTrack));
+    return tracks[randomNumber];
   }
 
   formatTime(seconds) {
