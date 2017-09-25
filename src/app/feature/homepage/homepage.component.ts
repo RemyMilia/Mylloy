@@ -15,6 +15,10 @@ export class HomepageComponent implements OnInit {
   public currentTrack: any;
   public title: String;
 
+  public elapsed;
+  public duration;
+  public position;
+
   constructor(
     private musicService: MusicService
   ) { }
@@ -31,28 +35,7 @@ export class HomepageComponent implements OnInit {
     });
 
     this.musicService.audio.onended = () => this.paused = !this.paused;
-  }
-
-  handlePausePlay() {
-    if (this.musicService.audio.paused) {
-      this.isFirstTrack ? this.playFirstTrack(this.tracks) : this.musicService.audio.play();
-      this.paused = false;
-    } else {
-      this.musicService.audio.pause();
-      this.paused = true;
-    }
-  }
-
-  handleStop() {
-    this.musicService.audio.pause();
-    this.musicService.audio.currentTime = 0;
-    this.paused = true;
-  }
-
-  playFirstTrack(tracks) {
-    this.currentTrack = this.tracks[0];
-    this.musicService.play(this.currentTrack.stream_url);
-    this.isFirstTrack = false;
+    this.musicService.audio.ontimeupdate = () => this.handleTimeUpdate();
   }
 
   handleBackward() {
@@ -71,11 +54,41 @@ export class HomepageComponent implements OnInit {
     }
   }
 
+  handlePausePlay() {
+    if (this.musicService.audio.paused) {
+      this.isFirstTrack ? this.playFirstTrack(this.tracks) : this.musicService.audio.play();
+      this.paused = false;
+    } else {
+      this.musicService.audio.pause();
+      this.paused = true;
+    }
+  }
+
   handleRandom() {
     const randomTrack = this.musicService.randomTrack(this.tracks, this.currentTrack);
     this.musicService.play(randomTrack.stream_url);
     this.currentTrack = randomTrack;
     this.title = this.currentTrack.title;
+  }
+
+  handleStop() {
+    this.musicService.audio.pause();
+    this.musicService.audio.currentTime = 0;
+    this.paused = true;
+  }
+
+  handleTimeUpdate() {
+    const elapsed = this.musicService.audio.currentTime;
+    const duration = this.musicService.audio.duration;
+    this.position = elapsed / duration;
+    this.elapsed = this.musicService.formatTime(elapsed);
+    this.duration = this.musicService.formatTime(duration);
+  }
+
+  playFirstTrack(tracks) {
+    this.currentTrack = this.tracks[0];
+    this.musicService.play(this.currentTrack.stream_url);
+    this.isFirstTrack = false;
   }
 
 }

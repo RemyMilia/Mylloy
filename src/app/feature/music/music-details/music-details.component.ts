@@ -7,9 +7,10 @@ import { Component, Input } from '@angular/core';
   </div>`,
   styles: [`.details h5 {
     text-align: center;
-    padding: 50px 10px;
+    padding: 40px 10px;
     margin: 0;
-    color: white;
+    color: #fff;
+    opacity: 0.85;
   }`]
 })
 export class MusicDetailsComponent {
