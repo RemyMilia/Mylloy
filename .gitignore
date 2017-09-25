@@ -48,4 +48,4 @@ Thumbs.db
 *.gif
 
 #env
-/src/environments
+#/src/environments

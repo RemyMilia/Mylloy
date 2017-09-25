@@ -1,0 +1,29 @@
+
+.details {
+    font-family: LemonMilk;
+    display: flex;
+    justify-content: center;
+    background-color: lightgrey;
+    margin-top: 0%;
+    opacity: 0.69;
+    height: 50px;
+}
+
+.player-container {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-right: 1px solid darkblue;
+  overflow: hidden;
+}
+
+.title-container {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  white-space: nowrap;
+}
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 23px;
+}

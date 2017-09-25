@@ -1,0 +1,11 @@
+<div class="col s1 m2 l4"></div>
+<div class="details player-container col s5 m4 l2">
+  <app-music-player [paused]="paused" (pauseplay)="handlePausePlay()" (stop)="handleStop()" (backward)="handleBackward()" (forward)="handleForward()"
+    (random)="handleRandom()">
+  </app-music-player>
+</div>
+<div class="details title-container col s5 m4 l2">
+  <h5 title="{{title}}" class="title">
+    {{title}}
+  </h5>
+</div>

@@ -5,9 +5,7 @@ import { environment } from '../../../../../environments/environment';
 
 @Injectable()
 export class ApiSoundCloudService {
-
   clientId: String = environment.soundCloud.clientId;
-
   constructor(private http: Http) {}
 
   get(url, attachClientId?) {

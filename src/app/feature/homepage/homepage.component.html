@@ -3,13 +3,12 @@
     <img width=1200 src="https://firebasestorage.googleapis.com/v0/b/mylloy-ac68d.appspot.com/o/banniere1-min.jpg?alt=media&token=ce2e2803-2a61-4f4e-abd2-70b18e59dd26">
   </div>
   <app-navbar [isHomepage]='true'></app-navbar>
-  <div class="row">
+  <div *ngIf="ready" class="row" style="margin-top: 300px">
+      <app-music-details *ngIf="ready"> </app-music-details>
     <!-- <h3 *ngIf="ready" class="coming-soon-ban">Coming soon</h3> -->
-    <app-music-details [title]="title"> </app-music-details>
-    <app-music-player [paused]="paused" (pauseplay)="handlePausePlay()" (stop)="handleStop()" (backward)="handleBackward()" (forward)="handleForward()" (random)="handleRandom()">
-    </app-music-player>
+    <!-- <app-music-progress [current]="position" [elapsed]="elapsed" [total]="duration"></app-music-progress> -->
   </div>
-  <div *ngIf="!ready " class="row ">
+  <div *ngIf="!ready" class="row">
     <app-loader></app-loader>
   </div>
 </div>
