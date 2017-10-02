@@ -37,10 +37,12 @@ export class MusicService {
   randomTrack(tracks, currentTrack) {
     let randomNumber;
     const trackLength = tracks.length;
-    do {
-      randomNumber = Math.floor((Math.random() * trackLength));
-    } while (randomNumber === tracks.indexOf(currentTrack));
-    return tracks[randomNumber];
+    if (trackLength !== 1) {
+      do {
+        randomNumber = Math.floor((Math.random() * trackLength));
+      } while (randomNumber === tracks.indexOf(currentTrack));
+      return tracks[randomNumber];
+    }
   }
 
   formatTime(seconds) {

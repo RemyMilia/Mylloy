@@ -36,7 +36,6 @@ export class MusicDetailsComponent implements OnInit {
 
   handleBackward() {
     const elapsed = this.musicService.audio.currentTime;
-    console.log(elapsed);
     if (elapsed >= 5) {
       this.musicService.audio.currentTime = elapsed - 5;
     }
@@ -77,7 +76,7 @@ export class MusicDetailsComponent implements OnInit {
   handleTimeUpdate() {
     const elapsed = this.musicService.audio.currentTime;
     const duration = this.musicService.audio.duration;
-    this.position = elapsed / duration;
+    this.position = elapsed && duration ? elapsed / duration : 0;
     this.elapsed = this.musicService.formatTime(elapsed);
     this.duration = this.musicService.formatTime(duration);
   }

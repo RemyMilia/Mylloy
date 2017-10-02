@@ -1,12 +1,13 @@
 
 .player .player__main button:hover, .player {
-  color: darkblue;
+  color: darkslateblue;
 }
 
 .player .player__main button {
   background: transparent;
-  border:none;
-  font-size: 30px;
+  border: none;
+  font-size: 35px;
   outline: none;
-  color: darkslateblue;
+  opacity: 0.8;
+  color: #060c5a;
 }

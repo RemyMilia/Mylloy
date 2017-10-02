@@ -1,11 +1,17 @@
-<div class="col s1 m2 l4"></div>
-<div class="details player-container col s5 m4 l2">
-  <app-music-player [paused]="paused" (pauseplay)="handlePausePlay()" (stop)="handleStop()" (backward)="handleBackward()" (forward)="handleForward()"
-    (random)="handleRandom()">
-  </app-music-player>
+<div class="row">
+  <div class="col s4 m5 l5"></div>
+  <div class="details title-container col s4 m2 l2">
+    <h3 title="{{title}}" class="title">
+      {{title}}
+      <app-music-progress [elapsed]="elapsed" [total]="duration" [current]="position"></app-music-progress>
+    </h3>
+  </div>
 </div>
-<div class="details title-container col s5 m4 l2">
-  <h5 title="{{title}}" class="title">
-    {{title}}
-  </h5>
+<div class="row">
+  <div class="col s4 m5 l5"></div>
+  <div class="details player-container col s4 m2 l2">
+    <app-music-player [paused]="paused" (pauseplay)="handlePausePlay()" (stop)="handleStop()" (backward)="handleBackward()" (forward)="handleForward()"
+      (random)="handleRandom()">
+    </app-music-player>
+  </div>
 </div>

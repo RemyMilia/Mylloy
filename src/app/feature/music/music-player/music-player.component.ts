@@ -10,7 +10,7 @@ export class MusicPlayerComponent {
   constructor() { }
 
   @Input() paused;
-  // Controls
+
   @Output() pauseplay = new EventEmitter();
   @Output() backward = new EventEmitter();
   @Output() forward = new EventEmitter();

@@ -11,7 +11,7 @@ import { Component, OnInit, Input } from '@angular/core';
   </div>`,
   styles: [`
     .container-progress {
-      margin-top: 21%;
+      margin-top: 320px;
     }
   `]
 })

@@ -3,27 +3,23 @@
     font-family: LemonMilk;
     display: flex;
     justify-content: center;
-    background-color: lightgrey;
     margin-top: 0%;
-    opacity: 0.69;
-    height: 50px;
+    opacity: 0.85;
 }
 
 .player-container {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-right: 1px solid darkblue;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
 .title-container {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   white-space: nowrap;
+  height: 95px;
 }
 
 .title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 23px;
+  background-color: rgba(200, 200, 200, 0.09);
+  border-radius: 5px;
+  letter-spacing: 2px;
 }
