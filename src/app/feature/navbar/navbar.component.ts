@@ -12,7 +12,7 @@ import { Component, Input, OnInit } from '@angular/core';
         <li><a href="/contact">Contact</a></li>
         <li><a href="https://www.facebook.com/mylloy/"> <i class="mdi-18px mdi mdi-facebook"></i></a></li>
         <li><a href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi-18px mdi mdi-youtube-play"></i></a></li>
-        <li><a href="#!"><i class="mdi-18px mdi mdi-soundcloud"></i></a></li>
+        <li><a href="https://soundcloud.com/my-lloy"><i class="mdi-18px mdi mdi-soundcloud"></i></a></li>
       </ul>
     </div>
   </nav>`,

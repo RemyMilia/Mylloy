@@ -6,7 +6,7 @@
 export const environment = {
   production: false,
   soundCloud: {
-    clientId: 'QnKPmGW3q4DPzNFO6aVqRUJi4Pr2jdI8&from=1505836800000&to=1505919600000',
-    tracks: 354820908
+    clientId: 'ygy2GkGPGW6Tn8m22Bz1SDplrFKBlwP0&from=1505836800000&to=1505919600000',
+    tracks: 359500099
   }
 };

@@ -46,6 +46,3 @@ Thumbs.db
 *.jpeg
 *.png
 *.gif
-
-#env
-#/src/environments
