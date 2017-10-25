@@ -4,7 +4,7 @@
   </div>
   <app-navbar [isHomepage]='true'></app-navbar>
   <div *ngIf="ready" style="margin-top: 280px">
-      <app-music-details *ngIf="ready"></app-music-details>
+    <app-music-details *ngIf="ready"></app-music-details>
   </div>
   <div *ngIf="!ready" class="row">
     <app-loader></app-loader>
