@@ -6,8 +6,9 @@
 .player .player__main button {
   background: transparent;
   border: none;
-  font-size: 35px;
+  font-size: 25px;
   outline: none;
   opacity: 0.8;
   color: #060c5a;
+  margin-right: 5px;
 }

@@ -4,9 +4,7 @@
   </div>
   <app-navbar [isHomepage]='true'></app-navbar>
   <div *ngIf="ready" style="margin-top: 280px">
-      <app-music-details *ngIf="ready"> </app-music-details>
-    <!-- <h3 *ngIf="ready" class="coming-soon-ban">Coming soon</h3> -->
-    <!-- <app-music-progress [current]="position" [elapsed]="elapsed" [total]="duration"></app-music-progress> -->
+      <app-music-details *ngIf="ready"></app-music-details>
   </div>
   <div *ngIf="!ready" class="row">
     <app-loader></app-loader>

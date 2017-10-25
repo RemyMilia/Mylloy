@@ -3,7 +3,6 @@
     font-family: LemonMilk;
     display: flex;
     justify-content: center;
-    margin-top: 0%;
     opacity: 0.85;
 }
 
@@ -11,6 +10,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  margin-top: -30px;
 }
 
 .title-container {
@@ -22,4 +22,5 @@
   background-color: rgba(200, 200, 200, 0.09);
   border-radius: 5px;
   letter-spacing: 2px;
+  font-size: 35px;
 }

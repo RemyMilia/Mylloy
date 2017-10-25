@@ -12,8 +12,7 @@ export class MusicPlayerComponent {
   @Input() paused;
 
   @Output() pauseplay = new EventEmitter();
-  @Output() backward = new EventEmitter();
-  @Output() forward = new EventEmitter();
-  @Output() random = new EventEmitter();
-  @Output() stop = new EventEmitter();
+  @Output() previous = new EventEmitter();
+  @Output() next = new EventEmitter();
+
 }

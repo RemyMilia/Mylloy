@@ -18,9 +18,9 @@ import { Component, Input, OnInit } from '@angular/core';
   </nav>`,
   styles: [`
   .mylloy-logo {
-    font-family:LemonMilk;
-    font-size:22px;
-    margin-left: 5px;
+    font-family: LemonMilk;
+    font-size: 22px;
+    margin-left: 8px;
   }
   `]
 })

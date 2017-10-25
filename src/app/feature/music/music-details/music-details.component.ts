@@ -8,8 +8,7 @@ import { MusicService } from '../../music/service/music.service';
 })
 export class MusicDetailsComponent implements OnInit {
 
-  public paused: Boolean = true;
-  public isFirstTrack: Boolean = true;
+  public paused: Boolean = false;
   public tracks: any[];
   public currentTrack: any;
   public title: String;
@@ -23,54 +22,43 @@ export class MusicDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.musicService.getTracks().subscribe(tracks => {
       this.tracks = tracks;
-      this.currentTrack = this.tracks[0];
+      this.currentTrack = this.tracks[4];
       this.title = this.currentTrack.title;
+      this.musicService.play(this.currentTrack.stream_url);
     });
 
-    this.musicService.audio.onended = () => this.paused = !this.paused;
+    this.musicService.audio.onended = () => {
+      this.handleNext();
+    };
     this.musicService.audio.ontimeupdate = () => this.handleTimeUpdate();
   }
 
-  handleBackward() {
-    const elapsed = this.musicService.audio.currentTime;
-    if (elapsed >= 5) {
-      this.musicService.audio.currentTime = elapsed - 5;
-    }
+  handleNext() {
+    const next = this.musicService.next(this.tracks, this.currentTrack);
+    this.musicService.play(next.stream_url);
+    this.currentTrack = next;
+    this.title = this.currentTrack.title;
+    this.paused = false;
   }
 
-  handleForward() {
-    const elapsed = this.musicService.audio.currentTime;
-    const duration = this.musicService.audio.duration;
-    if (duration - elapsed >= 5) {
-      this.musicService.audio.currentTime = elapsed + 5;
-    }
+  handlePrevious() {
+    const previous = this.musicService.previous(this.tracks, this.currentTrack);
+    this.musicService.play(previous.stream_url);
+    this.currentTrack = previous;
+    this.title = this.currentTrack.title;
+    this.paused = false;
   }
 
   handlePausePlay() {
     if (this.musicService.audio.paused) {
-      this.isFirstTrack ? this.playFirstTrack(this.tracks) : this.musicService.audio.play();
+      this.musicService.audio.play();
       this.paused = false;
     } else {
       this.musicService.audio.pause();
       this.paused = true;
     }
-  }
-
-  handleRandom() {
-    const randomTrack = this.musicService.randomTrack(this.tracks, this.currentTrack);
-    this.musicService.play(randomTrack.stream_url);
-    this.currentTrack = randomTrack;
-    this.title = this.currentTrack.title;
-    this.paused = false;
-  }
-
-  handleStop() {
-    this.musicService.audio.pause();
-    this.musicService.audio.currentTime = 0;
-    this.paused = true;
   }
 
   handleTimeUpdate() {
@@ -80,13 +68,6 @@ export class MusicDetailsComponent implements OnInit {
     this.elapsed = this.musicService.formatTime(elapsed);
     this.duration = this.musicService.formatTime(duration);
   }
-
-  playFirstTrack(tracks) {
-    this.currentTrack = this.tracks[0];
-    this.musicService.play(this.currentTrack.stream_url);
-    this.isFirstTrack = false;
-  }
-
 }
 
 

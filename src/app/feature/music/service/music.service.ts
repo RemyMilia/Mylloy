@@ -34,15 +34,18 @@ export class MusicService {
       .map(res => res.json()).map(play => play.tracks);
   }
 
-  randomTrack(tracks, currentTrack) {
-    let randomNumber;
-    const trackLength = tracks.length;
-    if (trackLength !== 1) {
-      do {
-        randomNumber = Math.floor((Math.random() * trackLength));
-      } while (randomNumber === tracks.indexOf(currentTrack));
-      return tracks[randomNumber];
+  next(tracks, currentTrack) {
+    if (tracks.indexOf(currentTrack) === tracks.length - 1) {
+      return tracks[0];
     }
+    return tracks[tracks.indexOf(currentTrack) + 1];
+  }
+
+  previous(tracks, currentTrack) {
+    if (tracks.indexOf(currentTrack) === 0) {
+      return tracks[tracks.length - 1];
+    }
+    return tracks[tracks.indexOf(currentTrack) - 1];
   }
 
   formatTime(seconds) {
