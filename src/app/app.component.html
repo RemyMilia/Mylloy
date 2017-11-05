@@ -2,6 +2,7 @@
   <header>
     <ul id="mobile-sidenav" class="side-nav">
       <li><a href="/">Home</a></li>
+      <li><a href="/shows">Shows</a></li>
       <li><a href="/contact">Contact</a></li>
       <li><a href="https://www.facebook.com/mylloy/">
           <i class="mdi-18px mdi mdi-facebook"></i>
@@ -10,7 +11,7 @@
       <li><a href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi-18px mdi mdi-youtube-play"></i></a></li>
       <li><a href="https://soundcloud.com/my-lloy"><i class="mdi-18px mdi mdi-soundcloud"></i></a></li>
     </ul>
-    <app-navbar *ngIf='!isHomepage' [isHomepage]='false'></app-navbar>
+    <app-navbar></app-navbar>
   </header>
   <main>
     <router-outlet></router-outlet>
@@ -18,11 +19,6 @@
   <footer class="page-footer black" *ngIf='ready'>
     <div class="row">
       <div class="container">
-        <div class="col m9 l9 s12">
-          <a class="band-title white-text">My lloy</a>
-          <br/>
-          <a style="font-family:LemonMilk;" class="grey-text text-lighten-4">Coming soon</a>
-        </div>
         <div class="col m3 l3">
           <a style="margin:10px" href="https://www.facebook.com/mylloy/"><i class="mdi-18px mdi mdi-facebook"></i></a>
           <a style="margin:10px" href="https://www.youtube.com/channel/UClW3-gE-I87OUHIGNwAS1hw"><i class="mdi-18px mdi mdi-youtube-play"></i></a>

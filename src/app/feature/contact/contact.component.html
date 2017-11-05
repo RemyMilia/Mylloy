@@ -1,10 +1,7 @@
 <div *ngIf='!ready' class='row'>
   <app-loader></app-loader>
 </div>
-<div class="crop">
-  <img width=100% src="https://firebasestorage.googleapis.com/v0/b/mylloy-ac68d.appspot.com/o/banniere1-min.jpg?alt=media&token=ce2e2803-2a61-4f4e-abd2-70b18e59dd26">
-</div>
-<div *ngIf='ready' class="row grey lighten-3" style="margin-bottom: 0px !important; background-color: #eeeeee !important;">
+<div *ngIf='ready' class="row grey lighten-3" style="margin-top: 25px">
   <div class="container">
     <form #form="ngForm" (ngSubmit)="onSubmit(form);" class="col l12 m12 s12">
       <div class="row">

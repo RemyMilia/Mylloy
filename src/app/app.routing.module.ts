@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
+import { AboutComponent } from './feature/about/about.component';
 import { ContactComponent } from './feature/contact/contact.component';
 import { HomepageComponent } from './feature/homepage/homepage.component';
-
-import { AppComponent } from './app.component';
+import { ShowsComponent } from './feature/shows/shows.component';
 
 const routes: Routes = [
-  { path: '', component: HomepageComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: '', component: HomepageComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'shows', component: ShowsComponent }
 ];
 
 @NgModule({

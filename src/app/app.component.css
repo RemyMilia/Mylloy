@@ -13,11 +13,11 @@ body {
 
 main {
   flex: 1 0 auto;
-  background-color:#424242;
-  z-index:0;
+  background-color: #eeeeee;
+  z-index: 0;
 }
 
 .band-title {
-  font-family:LemonMilk;
-  font-size:22px;
+  font-family: LemonMilk;
+  font-size: 22px;
 }
