@@ -1,7 +1,7 @@
 <div *ngIf='!ready' class='row'>
   <app-loader></app-loader>
 </div>
-<div *ngIf='ready' class="row grey lighten-3" style="margin-top: 25px">
+<div *ngIf='ready' class="row grey lighten-3">
   <div class="container">
     <form #form="ngForm" (ngSubmit)="onSubmit(form);" class="col l12 m12 s12">
       <div class="row">

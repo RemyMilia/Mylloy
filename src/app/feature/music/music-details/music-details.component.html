@@ -1,16 +1,15 @@
 <div class="row">
-  <div class="col m2 l5"></div>
-  <div class="details title-container col s12 m8 l2">
-    <h4 title="{{title}}" class="title">
-      {{title}}
-      <app-music-progress [elapsed]="elapsed" [total]="duration" [current]="position"></app-music-progress>
-    </h4>
-  </div>
-</div>
-<div class="row">
-  <div class="col m2 l5"></div>
-  <div class="details player-container col s12 m8 l2">
-    <app-music-player [paused]="paused" (pauseplay)="handlePausePlay()" (previous)="handlePrevious()" (next)="handleNext()">
-    </app-music-player>
+  <div class="col m2 l4"></div>
+  <div class="details title-container col s12 m8 l4">
+    <div>
+      <h4 title="{{title}}" class="title">
+        {{title}}
+        <app-music-progress [elapsed]="elapsed" [total]="duration" [current]="position"></app-music-progress>
+      </h4>
+    </div>
+    <div class="details player-container">
+      <app-music-player [paused]="paused" (pauseplay)="handlePausePlay()" (previous)="handlePrevious()" (next)="handleNext()">
+      </app-music-player>
+    </div>
   </div>
 </div>

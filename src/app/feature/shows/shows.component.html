@@ -1,3 +1,22 @@
-<h5>
-  Shows coming soon
-</h5>
+<div *ngIf='!ready' class='row'>
+  <app-loader></app-loader>
+</div>
+<div *ngIf='ready'>
+  <div class="container row">
+    <h5>Shows</h5>
+  </div>
+  <div class="row">
+    <div class="col l2 m2"> </div>
+    <div class="col l8 m8 s12">
+      <table class="bordered">
+        <tbody>
+          <tr *ngFor="let show of shows">
+            <td>{{show.date}}</td>
+            <td>{{show.place}}</td>
+            <td>{{show.city}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
