@@ -3,15 +3,19 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-loader',
   template: `
-  <div class="col s5 m5 l5"> </div>
-  <div class="col s2 m2 l2 container-progress">
-    <div class="progress">
-      <div class="indeterminate"></div>
-    </div>
+  <div class="container-progress preloader-wrapper big active">
+    <div class="spinner-layer spinner-grey-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
   </div>`,
   styles: [`
     .container-progress {
-      margin-top: 320px;
+      margin-top: 200px;
     }
   `]
 })
